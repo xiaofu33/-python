@@ -1,0 +1,9 @@
+ks=input("请输入一串字符串:")
+py=input("请输入偏移量：") or '3' #获取偏移量并设置其默认值
+for jm in ks:                                   #逐个读取字符串中的字符
+      if "a"<=jm<="z":   	      #确认字母大小写
+            print(chr(ord("a")+(ord(jm)-ord("a")+int(py))%26),end="")
+      elif "A"<=jm<="Z":
+            print(chr(ord("A")+(ord(jm)-ord("A")+int(py))%26),end="")#先读取其ASCII码后再进行计算，再转为字符输出
+      else:
+            print('请输入正确格式',end="")
